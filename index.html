@@ -3,59 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paul (hmj1026) — Software Developer & Projects</title>
-  <meta name="description" content="Portfolio of Paul (hmj1026) — AI agent tooling, workflow automation, and backend systems.">
-  <meta property="og:title" content="Paul (hmj1026) — Projects & Tools">
-  <meta property="og:description" content="AI agent tooling, workflow automation, and backend development.">
+  <title>Paul (hmj1026) — Projects</title>
+  <meta name="description" content="Personal projects and developer utilities by Paul (hmj1026).">
+  <meta property="og:title" content="Paul (hmj1026) — Projects">
+  <meta property="og:description" content="AI agent tooling, workflow automation, and backend systems.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hmj1026.github.io/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0b0d13;
-      --bg-card: rgba(18, 20, 29, 0.7);
-      --bg-card-hover: rgba(24, 28, 40, 0.9);
+      --bg: #0d0f14;
+      --bg-card: rgba(20, 23, 31, 0.7);
+      --bg-card-hover: rgba(27, 31, 42, 0.9);
       --border: rgba(255, 255, 255, 0.08);
-      --border-hover: rgba(99, 102, 241, 0.4);
+      --border-hover: rgba(99, 102, 241, 0.35);
       --text-main: #f3f4f6;
       --text-muted: #9ca3af;
       --text-dim: #6b7280;
       --primary: #6366f1;
-      --primary-glow: rgba(99, 102, 241, 0.15);
       --accent: #38bdf8;
-      --tag-bg: rgba(99, 102, 241, 0.1);
-      --tag-border: rgba(99, 102, 241, 0.2);
+      --tag-bg: rgba(99, 102, 241, 0.08);
+      --tag-border: rgba(99, 102, 241, 0.18);
       --tag-text: #a5b4fc;
-      --nav-bg: rgba(11, 13, 19, 0.85);
+      --nav-bg: rgba(13, 15, 20, 0.85);
       --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
     }
 
     html.light {
       --bg: #f8fafc;
-      --bg-card: rgba(255, 255, 255, 0.9);
-      --bg-card-hover: rgba(255, 255, 255, 1);
+      --bg-card: #ffffff;
+      --bg-card-hover: #ffffff;
       --border: rgba(0, 0, 0, 0.08);
-      --border-hover: rgba(99, 102, 241, 0.5);
+      --border-hover: rgba(99, 102, 241, 0.4);
       --text-main: #0f172a;
       --text-muted: #475569;
       --text-dim: #94a3b8;
       --primary: #4f46e5;
-      --primary-glow: rgba(79, 70, 229, 0.1);
       --accent: #0284c7;
-      --tag-bg: rgba(79, 70, 229, 0.06);
-      --tag-border: rgba(79, 70, 229, 0.18);
+      --tag-bg: rgba(79, 70, 229, 0.05);
+      --tag-border: rgba(79, 70, 229, 0.15);
       --tag-text: #4338ca;
-      --nav-bg: rgba(248, 250, 252, 0.88);
+      --nav-bg: rgba(248, 250, 252, 0.9);
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+      transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
     }
 
     body {
@@ -64,27 +62,13 @@
       font-family: var(--font-sans);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
       min-height: 100vh;
     }
 
-    .glow-bg {
-      position: fixed;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 900px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(56, 189, 248, 0.04) 50%, transparent 70%);
-      z-index: -1;
-      pointer-events: none;
-      filter: blur(80px);
-    }
-
     .container {
-      max-width: 1100px;
+      max-width: 980px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 20px;
     }
 
     /* Navigation */
@@ -92,7 +76,7 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      backdrop-filter: blur(16px);
+      backdrop-filter: blur(12px);
       background: var(--nav-bg);
       border-bottom: 1px solid var(--border);
     }
@@ -101,24 +85,24 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 64px;
+      height: 60px;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       text-decoration: none;
       color: var(--text-main);
-      font-weight: 700;
-      font-size: 1.1rem;
+      font-weight: 600;
+      font-size: 1rem;
     }
 
     .logo-badge {
       font-family: var(--font-mono);
-      font-size: 0.75rem;
-      padding: 2px 8px;
-      border-radius: 6px;
+      font-size: 0.72rem;
+      padding: 2px 7px;
+      border-radius: 5px;
       background: var(--tag-bg);
       color: var(--tag-text);
       border: 1px solid var(--tag-border);
@@ -127,199 +111,96 @@
     .nav-controls {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .btn-icon {
       background: transparent;
       border: 1px solid var(--border);
       color: var(--text-muted);
-      border-radius: 8px;
-      padding: 6px 12px;
+      border-radius: 6px;
+      padding: 5px 10px;
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 6px;
-      font-size: 0.85rem;
-      font-weight: 500;
+      gap: 5px;
+      font-size: 0.8rem;
       font-family: var(--font-sans);
     }
 
     .btn-icon:hover {
       color: var(--text-main);
       border-color: var(--border-hover);
-      background: var(--bg-card);
     }
 
-    /* Hero Section */
+    /* Hero */
     .hero {
-      padding: 56px 0 40px;
-      text-align: center;
-    }
-
-    .hero-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 12px;
-      border-radius: 9999px;
-      background: var(--tag-bg);
-      border: 1px solid var(--tag-border);
-      color: var(--tag-text);
-      font-size: 0.8rem;
-      font-family: var(--font-mono);
-      margin-bottom: 20px;
+      padding: 48px 0 32px;
     }
 
     .hero h1 {
-      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.2;
-      margin-bottom: 16px;
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
       color: var(--text-main);
     }
 
     .hero-subtitle {
-      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      font-size: 1.05rem;
       color: var(--text-muted);
-      max-width: 680px;
-      margin: 0 auto 28px;
-      line-height: 1.6;
+      max-width: 720px;
+      line-height: 1.65;
+      margin-bottom: 20px;
     }
 
-    .hero-actions {
+    .hero-links {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 12px;
-      margin-bottom: 40px;
     }
 
-    .btn-primary {
-      background: var(--primary);
-      color: #ffffff;
-      padding: 9px 18px;
-      border-radius: 8px;
-      font-weight: 500;
-      font-size: 0.9rem;
+    .hero-link {
+      color: var(--text-muted);
       text-decoration: none;
+      font-size: 0.875rem;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
+      padding: 4px 0;
     }
 
-    .btn-primary:hover {
-      opacity: 0.92;
-      transform: translateY(-1px);
-    }
-
-    .btn-secondary {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
+    .hero-link:hover {
       color: var(--text-main);
-      padding: 9px 16px;
-      border-radius: 8px;
-      font-weight: 500;
-      font-size: 0.9rem;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
     }
 
-    .btn-secondary:hover {
-      border-color: var(--border-hover);
-      transform: translateY(-1px);
-    }
-
-    /* Metrics Grid */
-    .metrics {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 14px;
-      margin-bottom: 40px;
-    }
-
-    .metric-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 16px;
-      text-align: center;
-    }
-
-    .metric-val {
-      font-size: 1.6rem;
-      font-weight: 700;
-      font-family: var(--font-mono);
-      color: var(--accent);
-      margin-bottom: 2px;
-    }
-
-    .metric-lbl {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    /* Philosophy / Approach Banner */
-    .philosophy-banner {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px 24px;
-      margin-bottom: 48px;
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-    }
-
-    .philosophy-icon {
-      font-size: 1.5rem;
-      flex-shrink: 0;
-      line-height: 1.2;
-    }
-
-    .philosophy-title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--text-main);
-      margin-bottom: 4px;
-    }
-
-    .philosophy-desc {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    /* Filter Bar & Search */
+    /* Filter & Search Bar */
     .controls-bar {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 14px;
-      margin-bottom: 28px;
-      padding-bottom: 14px;
+      gap: 12px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
       border-bottom: 1px solid var(--border);
     }
 
     .category-tabs {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 6px;
     }
 
     .tab-btn {
       background: transparent;
       border: 1px solid var(--border);
       color: var(--text-muted);
-      padding: 7px 14px;
-      border-radius: 8px;
+      padding: 6px 12px;
+      border-radius: 6px;
       cursor: pointer;
-      font-size: 0.85rem;
-      font-weight: 500;
+      font-size: 0.825rem;
       font-family: var(--font-sans);
     }
 
@@ -332,11 +213,12 @@
       background: var(--tag-bg);
       border-color: var(--primary);
       color: var(--text-main);
+      font-weight: 500;
     }
 
     .search-box {
       position: relative;
-      min-width: 220px;
+      min-width: 200px;
     }
 
     .search-input {
@@ -344,9 +226,9 @@
       background: var(--bg-card);
       border: 1px solid var(--border);
       color: var(--text-main);
-      border-radius: 8px;
-      padding: 7px 12px 7px 34px;
-      font-size: 0.85rem;
+      border-radius: 6px;
+      padding: 6px 10px 6px 30px;
+      font-size: 0.825rem;
       outline: none;
       font-family: var(--font-sans);
     }
@@ -357,36 +239,34 @@
 
     .search-icon {
       position: absolute;
-      left: 10px;
+      left: 9px;
       top: 50%;
       transform: translateY(-50%);
       color: var(--text-dim);
       pointer-events: none;
-      width: 15px;
-      height: 15px;
+      width: 14px;
+      height: 14px;
     }
 
     /* Projects Grid */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 20px;
-      margin-bottom: 56px;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
     }
 
     .project-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
+      border-radius: 10px;
+      padding: 18px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: transform 0.15s ease, border-color 0.15s ease;
     }
 
     .project-card:hover {
-      transform: translateY(-2px);
       border-color: var(--border-hover);
       background: var(--bg-card-hover);
     }
@@ -395,12 +275,12 @@
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 10px;
+      gap: 8px;
+      margin-bottom: 8px;
     }
 
     .project-title {
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 600;
       color: var(--text-main);
       text-decoration: none;
@@ -415,124 +295,87 @@
 
     .badge-star {
       font-family: var(--font-mono);
-      font-size: 0.75rem;
-      padding: 2px 7px;
-      border-radius: 9999px;
-      background: rgba(245, 158, 11, 0.12);
+      font-size: 0.72rem;
       color: #f59e0b;
-      border: 1px solid rgba(245, 158, 11, 0.25);
       flex-shrink: 0;
     }
 
     .project-desc {
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       color: var(--text-muted);
       line-height: 1.55;
       margin-bottom: 14px;
       flex-grow: 1;
     }
 
-    .project-features {
-      list-style: none;
-      margin-bottom: 16px;
-      font-size: 0.825rem;
-      color: var(--text-dim);
-    }
-
-    .project-features li {
-      position: relative;
-      padding-left: 14px;
-      margin-bottom: 4px;
-    }
-
-    .project-features li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-    }
-
     .tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 5px;
       margin-top: auto;
     }
 
     .tag {
       font-family: var(--font-mono);
-      font-size: 0.72rem;
-      padding: 2px 7px;
-      border-radius: 5px;
+      font-size: 0.7rem;
+      padding: 2px 6px;
+      border-radius: 4px;
       background: var(--tag-bg);
       border: 1px solid var(--tag-border);
       color: var(--tag-text);
     }
 
-    /* Tech Stack Section */
+    /* Tech Summary Section */
     .section-title {
-      font-size: 1.35rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      text-align: center;
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 14px;
       color: var(--text-main);
     }
 
-    .tech-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-      margin-bottom: 56px;
-    }
-
-    .tech-card {
+    .tech-summary {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 10px;
       padding: 18px;
+      margin-bottom: 48px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      font-size: 0.86rem;
     }
 
-    .tech-card-title {
-      font-size: 0.95rem;
+    .tech-group-title {
       font-weight: 600;
       color: var(--text-main);
-      margin-bottom: 10px;
+      margin-bottom: 4px;
     }
 
-    .tech-items {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .tech-pill {
-      font-size: 0.8rem;
-      padding: 3px 8px;
-      border-radius: 5px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border);
+    .tech-group-items {
       color: var(--text-muted);
-      font-family: var(--font-mono);
+      line-height: 1.5;
     }
 
     /* Footer */
     footer {
       border-top: 1px solid var(--border);
-      padding: 32px 0;
-      text-align: center;
+      padding: 28px 0;
       color: var(--text-dim);
-      font-size: 0.85rem;
+      font-size: 0.825rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
     }
 
     .footer-links {
       display: flex;
-      justify-content: center;
-      gap: 18px;
-      margin-bottom: 12px;
+      gap: 14px;
     }
 
     .footer-links a {
-      color: var(--text-muted);
+      color: var(--text-dim);
       text-decoration: none;
     }
 
@@ -540,7 +383,7 @@
       color: var(--text-main);
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 600px) {
       .projects-grid {
         grid-template-columns: 1fr;
       }
@@ -556,8 +399,6 @@
 </head>
 <body>
 
-  <div class="glow-bg"></div>
-
   <!-- Header -->
   <header>
     <div class="container nav-inner">
@@ -567,12 +408,12 @@
       </a>
       <div class="nav-controls">
         <button id="lang-toggle" class="btn-icon" title="Switch Language">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
           <span id="lang-label">繁體中文</span>
         </button>
         <button id="theme-toggle" class="btn-icon" title="Toggle Theme">
-          <svg id="theme-icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-          <svg id="theme-icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg id="theme-icon-moon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg id="theme-icon-sun" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
         </button>
       </div>
     </div>
@@ -582,57 +423,23 @@
 
     <!-- Hero -->
     <section class="hero">
-      <div class="hero-pill">
-        <span data-i18n="hero_pill">軟體開發與個人專案</span>
-      </div>
       <h1 data-i18n="hero_title">Paul (hmj1026)</h1>
       <p class="hero-subtitle" data-i18n="hero_subtitle">
-        軟體開發者。主要關注 AI Agent 工具、日常流程自動化與後端系統開發。
+        軟體開發者。主要關注 AI Agent 工具、日常流程自動化與後端系統開發。這裡整理了平時開發的開源專案與小工具。
       </p>
-      <div class="hero-actions">
-        <a href="https://github.com/hmj1026" target="_blank" class="btn-primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          GitHub Profile
+      <div class="hero-links">
+        <a href="https://github.com/hmj1026" target="_blank" class="hero-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
         </a>
-        <a href="https://packagist.org/packages/hmj1026/devkit" target="_blank" class="btn-secondary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+        <a href="https://packagist.org/packages/hmj1026/devkit" target="_blank" class="hero-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
           Packagist (devkit)
         </a>
-        <a href="https://skills.sh/hmj1026" target="_blank" class="btn-secondary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-          skills.sh Verified
+        <a href="https://skills.sh/hmj1026" target="_blank" class="hero-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          skills.sh
         </a>
-      </div>
-
-      <!-- Quick Metrics -->
-      <div class="metrics">
-        <div class="metric-card">
-          <div class="metric-val">33</div>
-          <div class="metric-lbl" data-i18n="m_agents">角色專用 Agent (dhpk)</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-val">14 階段</div>
-          <div class="metric-lbl" data-i18n="m_stages">NotebookLM 建課流程</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-val">19 組</div>
-          <div class="metric-lbl" data-i18n="m_matrix">PHP × Laravel CI 測試矩陣</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-val">7 家</div>
-          <div class="metric-lbl" data-i18n="m_banks">銀行 PDF 帳單解析 (CCAS)</div>
-        </div>
-      </div>
-
-      <!-- Approach Callout -->
-      <div class="philosophy-banner">
-        <div class="philosophy-icon">🛠️</div>
-        <div style="text-align: left;">
-          <div class="philosophy-title" data-i18n="philo_title">關於與開發方式</div>
-          <div class="philosophy-desc" data-i18n="philo_desc">
-            重視工具的實用性與穩定度。平時喜歡開發可重複使用的外掛模組、改善終端機體驗的小工具，並透過腳本將繁瑣的手動操作自動化。
-          </div>
-        </div>
       </div>
     </section>
 
@@ -646,7 +453,7 @@
       </div>
       <div class="search-box">
         <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        <input type="text" id="project-search" class="search-input" placeholder="搜尋專案名稱或技術標籤..." data-i18n-attr="placeholder:search_placeholder">
+        <input type="text" id="project-search" class="search-input" placeholder="搜尋專案..." data-i18n-attr="placeholder:search_placeholder">
       </div>
     </div>
 
@@ -655,45 +462,25 @@
       <!-- Generated by JS -->
     </section>
 
-    <!-- Tech Arsenal -->
+    <!-- Tech Summary -->
     <section>
       <h2 class="section-title" data-i18n="tech_title">常用技術與工具</h2>
-      <div class="tech-grid">
-        <div class="tech-card">
-          <div class="tech-card-title">🤖 AI Agent 與外掛</div>
-          <div class="tech-items">
-            <span class="tech-pill">Claude Code Plugin</span>
-            <span class="tech-pill">Agent Skills</span>
-            <span class="tech-pill">MCP Protocol</span>
-            <span class="tech-pill">NotebookLM Automation</span>
-          </div>
+      <div class="tech-summary">
+        <div>
+          <div class="tech-group-title">AI & Agent</div>
+          <div class="tech-group-items">Claude Code Plugins, Agent Skills, MCP Protocol, NotebookLM</div>
         </div>
-        <div class="tech-card">
-          <div class="tech-card-title">💻 程式語言</div>
-          <div class="tech-items">
-            <span class="tech-pill">TypeScript / Node.js</span>
-            <span class="tech-pill">PHP 7.3 ~ 8.4</span>
-            <span class="tech-pill">Python 3</span>
-            <span class="tech-pill">Shell (Bash / Zsh)</span>
-          </div>
+        <div>
+          <div class="tech-group-title">Languages</div>
+          <div class="tech-group-items">TypeScript, Node.js, PHP, Python, Bash/Zsh</div>
         </div>
-        <div class="tech-card">
-          <div class="tech-card-title">🛠️ 框架與庫</div>
-          <div class="tech-items">
-            <span class="tech-pill">Laravel</span>
-            <span class="tech-pill">Yii Framework</span>
-            <span class="tech-pill">React</span>
-            <span class="tech-pill">Vue</span>
-          </div>
+        <div>
+          <div class="tech-group-title">Frameworks</div>
+          <div class="tech-group-items">Laravel, Yii Framework, React, Vue</div>
         </div>
-        <div class="tech-card">
-          <div class="tech-card-title">📦 資料庫與環境</div>
-          <div class="tech-items">
-            <span class="tech-pill">Docker & Compose</span>
-            <span class="tech-pill">Elasticsearch</span>
-            <span class="tech-pill">MySQL</span>
-            <span class="tech-pill">Redis</span>
-          </div>
+        <div>
+          <div class="tech-group-title">Infra & Data</div>
+          <div class="tech-group-items">Docker & Compose, Elasticsearch, MySQL, Redis</div>
         </div>
       </div>
     </section>
@@ -701,21 +488,18 @@
   </main>
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-links">
-        <a href="https://github.com/hmj1026" target="_blank">GitHub</a>
-        <a href="https://github.com/hmj1026/dhpk" target="_blank">dhpk</a>
-        <a href="https://github.com/hmj1026/notebooklm-course-builder" target="_blank">NotebookLM Skill</a>
-        <a href="https://github.com/hmj1026/ccas" target="_blank">CCAS</a>
-        <a href="https://packagist.org/packages/hmj1026/devkit" target="_blank">Packagist</a>
-      </div>
-      <p>© <span id="year"></span> Paul (hmj1026). Hosted statically on GitHub Pages.</p>
+  <footer class="container">
+    <div>© <span id="year"></span> Paul (hmj1026)</div>
+    <div class="footer-links">
+      <a href="https://github.com/hmj1026" target="_blank">GitHub</a>
+      <a href="https://github.com/hmj1026/dhpk" target="_blank">dhpk</a>
+      <a href="https://github.com/hmj1026/notebooklm-course-builder" target="_blank">NotebookLM Skill</a>
+      <a href="https://github.com/hmj1026/ccas" target="_blank">CCAS</a>
+      <a href="https://packagist.org/packages/hmj1026/devkit" target="_blank">Packagist</a>
     </div>
   </footer>
 
   <script>
-    // Project Data Definition
     const projects = [
       {
         id: "dhpk",
@@ -723,11 +507,9 @@
         category: "agent",
         stars: 2,
         url: "https://github.com/hmj1026/dhpk",
-        desc_en: "A development plugin for Claude Code that organizes role-based agents, code review helpers, and language stack modules.",
-        desc_zh: "Claude Code 的開發擴充外掛，整理了多個角色 Agent、代碼審核輔助功能與各語言開發模組。",
-        features_en: ["Built-in role-based agents and review helpers", "Modular support for PHP, Laravel, React, Vue, Python", "Session history and auxiliary workflow commands"],
-        features_zh: ["內建角色專用 Agent 與代碼審查支援", "支援 PHP、Laravel、Vue、React 等常用模組", "提供跨工作階段紀錄與輔助指令"],
-        tags: ["JavaScript", "Claude Code Plugin", "Developer Tools"]
+        desc_en: "A Claude Code plugin organizing custom agents, review helpers, and language stack modules.",
+        desc_zh: "Claude Code 的擴充外掛，整合自訂 Agent、代碼審查與多語言（PHP, Laravel, React, Vue 等）開發模組。",
+        tags: ["JavaScript", "Claude Code Plugin"]
       },
       {
         id: "notebooklm",
@@ -735,11 +517,9 @@
         category: "agent",
         stars: 13,
         url: "https://github.com/hmj1026/notebooklm-course-builder",
-        desc_en: "A helper skill for Google NotebookLM that organizes course outlines, verifies reference sources, and imports materials step by step.",
+        desc_en: "A helper skill for Google NotebookLM that organizes course outlines, verifies references, and imports materials step by step.",
         desc_zh: "Google NotebookLM 的建課輔助技能，將課程大綱整理、驗證資料來源並逐步匯入筆記本。",
-        features_en: ["Supports browser automation and step-by-step wizard", "Separates research prompts from course source material", "Published on skills.sh registry"],
-        features_zh: ["支援自動化操作與手動逐步引導", "區隔研究提示詞與教材來源", "收錄於 skills.sh 技能市集"],
-        tags: ["JavaScript", "Agent Skill", "NotebookLM", "skills.sh"]
+        tags: ["JavaScript", "Agent Skill", "skills.sh"]
       },
       {
         id: "ccas",
@@ -747,11 +527,9 @@
         category: "automation",
         stars: 1,
         url: "https://github.com/hmj1026/ccas",
-        desc_en: "Automated pipeline for credit card statements. Fetches encrypted bank PDFs from Gmail, categorizes transactions, and sends Telegram alerts.",
-        desc_zh: "信用卡帳單自動化工具。定期從 Gmail 抓取加密 PDF 電子帳單、解析交易明細並自動分類，提供 Telegram 通知與本機檢視介面。",
-        features_en: ["Parses encrypted PDFs from 7 Taiwanese banks", "Regex-based transaction categorization", "Telegram alerts and local React dashboard"],
-        features_zh: ["支援台灣 7 家常見銀行 PDF 帳單解析", "正則表達式自動分類消費項目", "提供 Telegram 通知與本機 React 檢視介面"],
-        tags: ["Python", "FastAPI", "React", "Docker Compose"]
+        desc_en: "Credit card statement automation pipeline that fetches encrypted PDFs from Gmail, parses transactions, and sends Telegram alerts.",
+        desc_zh: "信用卡帳單自動化工具。定期自 Gmail 抓取加密 PDF 電子帳單、解析明細並分類，提供 Telegram 通知與本機檢視介面。",
+        tags: ["Python", "FastAPI", "React", "Docker"]
       },
       {
         id: "devkit",
@@ -759,11 +537,9 @@
         category: "backend",
         stars: 0,
         url: "https://github.com/hmj1026/devkit",
-        desc_en: "Generic PHP / Laravel utility package bundling Elasticsearch helpers, HTTP gateway, SMS dispatch, and audit logging.",
-        desc_zh: "通用 PHP / Laravel 函式庫，整理了常用的 Elasticsearch、HTTP 請求、簡訊發送與審計日誌等功能。",
-        features_en: ["Common backend helper modules in one package", "Tested across PHP 7.3–8.4 and Laravel 6–11", "Published on Packagist (v1.0.0)"],
-        features_zh: ["整合常用後端輔助模組", "支援 PHP 7.3 ~ 8.4 與 Laravel 6 ~ 11", "發布於 Packagist（v1.0.0）"],
-        tags: ["PHP 7.3~8.4", "Laravel 6~11", "Packagist", "CI Matrix"]
+        desc_en: "Generic PHP / Laravel utility package bundling Elasticsearch helpers, HTTP client, SMS dispatch, and audit logging.",
+        desc_zh: "通用 PHP / Laravel 函式庫，整理常用的 Elasticsearch、HTTP 請求、簡訊發送與審計日誌等後端功能。",
+        tags: ["PHP", "Laravel", "Packagist"]
       },
       {
         id: "claude-statusline",
@@ -771,11 +547,9 @@
         category: "agent",
         stars: 0,
         url: "https://github.com/hmj1026/claude-statusline",
-        desc_en: "A lightweight terminal status line for Claude Code, displaying current model, token usage %, and rate limits in a single line.",
-        desc_zh: "Claude Code 的終端狀態列，在單行簡潔顯示當前模型、Token 使用量百分比與速率限制。",
-        features_en: ["Runs as external sub-process with zero token overhead", "Shows 5h and 7d rate limit reset times", "Displays git branch and file change stats"],
-        features_zh: ["獨立腳本執行，不額外消耗 Token", "顯示 5 小時與 7 天速率限制與重設時間", "顯示 Git 分支與改動檔案統計"],
-        tags: ["Shell", "Developer CLI", "Claude Code"]
+        desc_en: "Lightweight terminal status line for Claude Code displaying current model, token usage %, and rate limits in a single line.",
+        desc_zh: "Claude Code 的終端狀態列，在單行顯示當前模型、Token 使用量百分比與速率限制。",
+        tags: ["Shell", "CLI", "Claude Code"]
       },
       {
         id: "bg-watch",
@@ -783,11 +557,9 @@
         category: "agent",
         stars: 0,
         url: "https://github.com/hmj1026/bg-watch",
-        desc_en: "A terminal monitor that displays the progress of background test runs and build jobs in a single status line.",
-        desc_zh: "背景工作監控工具，在終端機單行顯示正在執行的測試套件或背景任務進度。",
-        features_en: ["Clean single-line status display", "Monitors multiple background processes", "Dims automatically when idle"],
-        features_zh: ["精簡的單行終端狀態顯示", "監控多個背景執行程序", "作業完成後自動淡出"],
-        tags: ["TypeScript", "Terminal UI", "CLI"]
+        desc_en: "Terminal monitor displaying the status and progress of background test runs and build tasks in a compact status line.",
+        desc_zh: "終端背景作業監控工具，在單行即時顯示背景測試或構建任務的進度。",
+        tags: ["TypeScript", "CLI"]
       },
       {
         id: "bug-investigation",
@@ -795,11 +567,9 @@
         category: "agent",
         stars: 1,
         url: "https://github.com/hmj1026/bug-investigation",
-        desc_en: "Agent skill for bug investigation, guiding step-by-step hypothesis testing and reproducible checks.",
-        desc_zh: "排查問題用的 Agent 技能，依步驟記錄假設、重現流程與檢查結果。",
-        features_en: ["Tracks hypotheses and verification steps", "Assists in reproducing and isolating issues", "Structured diagnosis flow"],
-        features_zh: ["記錄排查假設與驗證步驟", "輔助重現與縮小問題範圍", "提供條理化的診斷流程"],
-        tags: ["Shell", "Agent Skill", "Debugging"]
+        desc_en: "An agent skill for bug diagnosis that tracks hypotheses, reproduction steps, and findings.",
+        desc_zh: "問題排查用的 Agent 技能，依序記錄假設、重現步驟與檢查結果。",
+        tags: ["Shell", "Agent Skill"]
       },
       {
         id: "home-assistant",
@@ -807,11 +577,9 @@
         category: "agent",
         stars: 0,
         url: "https://github.com/hmj1026/home-assistant-helpers",
-        desc_en: "Claude Code plugin for Home Assistant, helping generate and refine Lovelace dashboard configurations.",
-        desc_zh: "Home Assistant 輔助外掛，協助規劃與調整 Lovelace 儀表板設定。",
-        features_en: ["Includes ha-dashboard-studio helper", "Generates Lovelace YAML configurations", "Useful for smart home dashboard setup"],
-        features_zh: ["包含 ha-dashboard-studio 互動技能", "輔助生成儀表板 YAML 配置", "適用於智慧家庭介面調整"],
-        tags: ["Shell", "IoT", "Home Assistant"]
+        desc_en: "Claude Code helper plugin for Home Assistant, assisting with Lovelace dashboard configurations.",
+        desc_zh: "Home Assistant 輔助外掛，協助規劃與生成 Lovelace 儀表板設定。",
+        tags: ["Shell", "Home Assistant"]
       },
       {
         id: "line-tools",
@@ -820,10 +588,8 @@
         stars: 2,
         url: "https://github.com/hmj1026/Line_Parser",
         desc_en: "LINE chat log parser and automated event notification bot.",
-        desc_zh: "LINE 聊天記錄解析工具與事件推播機器人。",
-        features_en: ["Parses chat logs into structured data", "Simple viewing interface", "Automated message dispatch"],
-        features_zh: ["解析對話文字為結構化資料", "提供簡易檢視介面", "支援自動化訊息推播"],
-        tags: ["Python", "HTML", "LINE Bot"]
+        desc_zh: "LINE 聊天記錄解析工具與訊息推播機器人。",
+        tags: ["Python", "LINE API"]
       },
       {
         id: "notifier",
@@ -831,11 +597,9 @@
         category: "backend",
         stars: 0,
         url: "https://github.com/hmj1026/notifier",
-        desc_en: "Service uptime and health check script with notification support.",
+        desc_en: "Service uptime and endpoint health check script with notification alerts.",
         desc_zh: "網站與 API 服務健康檢查工具，遇到異常時發送通知。",
-        features_en: ["Regular endpoint health pinging", "Multi-channel notification support", "Lightweight PHP implementation"],
-        features_zh: ["定期 ping 端點確認狀態", "支援多種通報管道", "輕量化 PHP 腳本實作"],
-        tags: ["PHP", "Monitoring", "Alerting"]
+        tags: ["PHP", "Monitoring"]
       },
       {
         id: "docker-run",
@@ -845,46 +609,29 @@
         url: "https://github.com/hmj1026/docker_run",
         desc_en: "Docker configurations and run scripts for local development environments.",
         desc_zh: "常用開發環境的 Docker 配置與啟動腳本。",
-        features_en: ["Isolated development environments", "Pre-configured PHP and databases", "Simplifies local setup"],
-        features_zh: ["隔離不同專案的執行環境", "預先配置 PHP 與常用資料庫", "簡化本機環境設定步驟"],
-        tags: ["Dockerfile", "Docker Compose", "DevOps"]
+        tags: ["Dockerfile", "Docker Compose"]
       }
     ];
 
-    // Language Pack
     const i18n = {
       en: {
-        hero_pill: "Software Development & Projects",
         hero_title: "Paul (hmj1026)",
-        hero_subtitle: "Software developer working on AI agent tooling, workflow automation, and backend systems.",
-        m_agents: "Role Agents (dhpk)",
-        m_stages: "NotebookLM Course Phases",
-        m_matrix: "PHP × Laravel CI Matrix",
-        m_banks: "Bank PDF Parsers (CCAS)",
-        philo_title: "About & Engineering Approach",
-        philo_desc: "Focusing on practical tooling, reproducible workflows, and system reliability. I enjoy building reusable agent extensions, terminal utilities, and scripts that automate repetitive tasks.",
+        hero_subtitle: "Software developer working on AI agent tooling, workflow automation, and backend systems. Here are some of the open-source tools and projects I've built.",
         cat_all: "All Projects",
         cat_agent: "AI Agent Tools",
-        cat_auto: "Automation & Utilities",
-        cat_backend: "Backend & Dev Runtimes",
-        search_placeholder: "Search projects or stack...",
+        cat_auto: "Automation",
+        cat_backend: "Backend & Dev Setup",
+        search_placeholder: "Search projects...",
         tech_title: "Technologies & Tools"
       },
       zh: {
-        hero_pill: "軟體開發與個人專案",
         hero_title: "Paul (hmj1026)",
-        hero_subtitle: "軟體開發者。主要關注 AI Agent 工具、日常流程自動化與後端系統開發。",
-        m_agents: "角色專用 Agent (dhpk)",
-        m_stages: "NotebookLM 建課流程",
-        m_matrix: "PHP × Laravel CI 測試矩陣",
-        m_banks: "銀行 PDF 帳單解析 (CCAS)",
-        philo_title: "關於與開發方式",
-        philo_desc: "重視工具的實用性與穩定度。平時喜歡開發可重複使用的外掛模組、改善終端機體驗的小工具，並透過腳本將繁瑣的手動操作自動化。",
+        hero_subtitle: "軟體開發者。主要關注 AI Agent 工具、日常流程自動化與後端系統開發。這裡整理了平時開發的開源專案與小工具。",
         cat_all: "全部專案",
         cat_agent: "AI Agent 工具",
         cat_auto: "日常自動化",
         cat_backend: "後端與開發環境",
-        search_placeholder: "搜尋專案名稱或技術標籤...",
+        search_placeholder: "搜尋專案...",
         tech_title: "常用技術與工具"
       }
     };
@@ -901,35 +648,29 @@
         const matchCat = (currentCat === "all" || p.category === currentCat);
         const q = searchQuery.toLowerCase().trim();
         const text = (p.name + " " + p.tags.join(" ") + " " + (currentLang === "en" ? p.desc_en : p.desc_zh)).toLowerCase();
-        const matchSearch = (!q || text.includes(q));
-        return matchCat && matchSearch;
+        return matchCat && (!q || text.includes(q));
       });
 
       if (filtered.length === 0) {
-        container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-dim);">沒有找到相符的專案。</div>`;
+        container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 32px; color: var(--text-dim); font-size: 0.85rem;">沒有找到相符的專案。</div>`;
         return;
       }
 
       filtered.forEach(p => {
         const card = document.createElement("div");
         card.className = "project-card";
-
         const desc = currentLang === "en" ? p.desc_en : p.desc_zh;
-        const features = currentLang === "en" ? p.features_en : p.features_zh;
 
         card.innerHTML = `
           <div>
             <div class="card-header">
               <a href="${p.url}" target="_blank" class="project-title">
                 ${p.name}
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
               </a>
               ${p.stars > 0 ? `<span class="badge-star">★ ${p.stars}</span>` : ""}
             </div>
             <p class="project-desc">${desc}</p>
-            <ul class="project-features">
-              ${features.map(f => `<li>${f}</li>`).join("")}
-            </ul>
           </div>
           <div class="tags">
             ${p.tags.map(t => `<span class="tag">${t}</span>`).join("")}
@@ -946,7 +687,7 @@
 
       document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
-        if (dict[key]) el.innerHTML = dict[key];
+        if (dict[key]) el.textContent = dict[key];
       });
 
       document.querySelectorAll("[data-i18n-attr]").forEach(el => {
@@ -958,12 +699,10 @@
       renderProjects();
     }
 
-    // Language Toggle
     document.getElementById("lang-toggle").addEventListener("click", () => {
       applyLanguage(currentLang === "zh" ? "en" : "zh");
     });
 
-    // Theme Toggle
     const themeToggleBtn = document.getElementById("theme-toggle");
     const iconMoon = document.getElementById("theme-icon-moon");
     const iconSun = document.getElementById("theme-icon-sun");
@@ -975,7 +714,6 @@
       iconSun.style.display = isDark ? "none" : "block";
     });
 
-    // Tabs filter
     document.querySelectorAll(".tab-btn").forEach(btn => {
       btn.addEventListener("click", () => {
         document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
@@ -985,16 +723,13 @@
       });
     });
 
-    // Search filter
     document.getElementById("project-search").addEventListener("input", (e) => {
       searchQuery = e.target.value;
       renderProjects();
     });
 
-    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Initial render
     applyLanguage("zh");
   </script>
 </body>
